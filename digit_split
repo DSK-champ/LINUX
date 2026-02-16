@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Enter 5 dig numebr"
+read NUM
+n=1
+while [ $n -lt 6 ]
+do
+	a=`echo $NUM | cut -c $n`
+	echo $a
+	n=`expr $n + 1`
+done

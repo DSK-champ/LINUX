@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in darla sravan kumar
+do
+	echo "looping .. i = $i"
+done

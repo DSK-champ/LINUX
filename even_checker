@@ -1,0 +1,14 @@
+#!/bin/bash
+
+a="1 2 3 4 5 6 7"
+
+for NUM in $a
+do 
+	Q=`expr $NUM % 2`
+	if [ $Q -eq 0 ]
+	then
+		echo "$NUM is Even"
+	continue
+	fi
+	echo "$NUM is Odd"
+done

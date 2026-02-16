@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Choose an option
+1) Date
+2) User
+3) List of files
+4) Processors
+5) Exit"
+read choice
+case $choice in
+	1) date ;;
+	2) who ;;
+	3) ls -l ;;
+	4) ps -f ;;
+	5) exit ;;
+	*) echo "inavil input"
+esac

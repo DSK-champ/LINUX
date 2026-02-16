@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Chat with Chatbot : "
+while :
+do
+	read INPUT
+	case $INPUT in
+		hello)
+			echo "Hello dude"
+			;;
+		hi)
+			echo "Hi dude"
+			;;
+		bye)
+			echo "ohhhhh bye"
+			break
+			;;
+		*)
+			echo "what?"
+			;;
+	esac
+done

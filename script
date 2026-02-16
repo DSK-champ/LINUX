@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sed -n -f pattern string_file > output

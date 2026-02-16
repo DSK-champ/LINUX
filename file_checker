@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "Enter name"
+read name
+
+if [ -f "$name" ];
+then
+	echo "it is a file"
+	cat "$name"
+
+elif [ -d "$name" ];
+then
+	echo its a dir
+	ls "$name"
+
+else
+	echo file doesnt exits
+fi
