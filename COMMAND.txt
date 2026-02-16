@@ -1,0 +1,49 @@
+COMMAND                                                     DESCRIPTION
+--------------------------------------------------------------------------------------------------------------
+grep grape file1.txt                                       Find lines containing "grape"
+grep -i GRapE file1.txt                                    Case-insensitive search
+grep grape file1.txt file2.txt file3.txt                   Search across multiple files
+grep -r grape                                              Recursive search in directory
+grep -w grape file1.txt                                    Match whole word only
+grep --color grape file1.txt                               Highlight matches
+grep ^apple file1.txt                                      Match beginning of line
+grep grape$ file1.txt                                      Match end of line
+grep [aeiou]$ file1.txt                                    Lines ending with vowel
+grep -E 'apple 123' data.txt                               Match sequence using extended regex
+grep -E 'apple|orange' data.txt                            Match apple OR orange
+grep -E '[0-9]+' data.txt                                  One or more digits
+grep -E '(apple|orange)[[:space:]][0-9]+' data.txt         Word + space + numbers
+grep -E '[0-9]{3}' data.txt                                Exactly 3 consecutive digits
+grep -E '([a-zA-Z]+)([0-9]+)' data.txt                     Letters followed by numbers
+grep -E '[a-zA-Z]+[[:space:]]+[0-9]+' data.txt             Letters + space + numbers
+grep -E '^apple' data.txt                                  Match start of line
+grep -E '55$' data.txt                                     Match end of line
+grep -v 'text line' emp.lst > other.lst                    Save unmatched lines
+wc -l other.lst                                            Count lines
+grep -e apple -e banana file                               Multiple patterns
+grep -f pattern.txt file.txt                               Patterns from file
+
+sed -n '/apple/p' file                                     Print lines containing apple
+sed '/apple/p' file                                        Print file + duplicate matches
+sed 's/apple/fruit/' file                                  Replace first occurrence per line
+sed 's/apple/fruit/g' file                                 Replace all occurrences
+sed -n '/apple/,/banana/p' file                            Print range apple to banana
+sed -n -e '/apple/p' -e '/banana/p' file                   Print lines with apple and banana
+sed -n '/apple/p;/banana/p' file                           Same as above
+sed -n '/apple/w file1; /banana/w file2' file              Write matches to separate files
+sed -n '1,500w file1; 501,$w file2' file                   Split file by line number
+sed '/apple/d' file > newfile                              Delete lines containing apple
+sed -n '/apple/!p' file > newfile                          Print lines without apple
+sed '/[ ]*$/d' file                                        Delete blank lines
+sed 's/|/:/' file                                          Replace first | per line
+sed 's/|/:/g' file                                         Replace all | per line
+sed '1,3s/|/:/g' file                                      Replace in first 3 lines
+sed 's/<I>/<EM>/g; s/<B>/<STRONG>/g; s/<U>/<EM>/g' file    Multiple replacements
+
+head -n 99 file | tail -n 1                                Print 99th line
+date +"%m%d%y"                                             Date in mmddyy format
+echo $HOME                                                 Current home directory
+whoami                                                     Current username
+echo "Today is : $(date +"%m/%d/%y")"                      Display formatted date
+who | wc -l                                                Number of logged-in users
+tty                                                        Display terminal number
