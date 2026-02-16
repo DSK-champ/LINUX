@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for f in *
+do
+    if [ -f "$f" ] && [ -r "$f" ] && [ -w "$f" ]; then
+        echo "$f"
+    fi
+done
+
